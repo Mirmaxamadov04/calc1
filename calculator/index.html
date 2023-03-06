@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./calc.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <form class="calc__form">
+        <div class="dissplay">
+          <input type="text" name="display" class="display" value="0" />
+        </div>
+
+        <div>
+          <input
+            type="button"
+            value="AC"
+            class="calc__input color-dark-white"
+            onclick="display.value = '0'"
+          />
+          <input
+            type="button"
+            value="+/-"
+            class="calc__input color-dark-white"
+            onclick="checkoperator('-') "
+          />
+          <input
+            type="button"
+            value="%"
+            class="calc__input color-dark-white"
+            onclick="checkoperator('%') "
+          />
+          <input
+            type="button"
+            value="/"
+            class="calc__input color-light-yellow"
+            onclick="checkoperator('/') "
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="7"
+            class="calc__input"
+            onclick="check('7')"
+          />
+          <input
+            type="button"
+            value="8"
+            class="calc__input"
+            onclick="check('8')"
+          />
+          <input
+            type="button"
+            value="9"
+            class="calc__input"
+            onclick="check('9')"
+          />
+          <input
+            type="button"
+            value="*"
+            class="calc__input color-light-yellow"
+            onclick="checkoperator('*') "
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="4"
+            class="calc__input"
+            onclick="check('4')"
+          />
+          <input
+            type="button"
+            value="5"
+            class="calc__input"
+            onclick="check('5')"
+          />
+          <input
+            type="button"
+            value="6"
+            class="calc__input"
+            onclick="check('6')"
+          />
+          <input
+            type="button"
+            value="-"
+            class="calc__input color-light-yellow"
+            onclick="checkoperator('-') "
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="1"
+            class="calc__input"
+            onclick="check('1')"
+          />
+          <input
+            type="button"
+            value="2"
+            class="calc__input"
+            onclick="check('2')"
+          />
+          <input
+            type="button"
+            value="3"
+            class="calc__input"
+            onclick="check('3')"
+          />
+          <input
+            type="button"
+            value="+"
+            class="calc__input color-light-yellow"
+            onclick="checkoperator('+') "
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="0"
+            class="calc__input zero-width"
+            onclick="check('0')"
+          />
+          <input
+            type="button"
+            value="."
+            class="calc__input"
+            onclick="checkoperator('.') "
+          />
+          <input
+            type="button"
+            value="="
+            class="calc__input color-light-yellow"
+            onclick="display.value =  eval( display.value )"
+          />
+        </div>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
